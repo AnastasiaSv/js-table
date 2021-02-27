@@ -1,0 +1,33 @@
+@import "variables";
+
+@mixin button($color: green) {
+    height: 24px;
+    min-width: 24px;
+    padding: 3px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.7);
+
+    & i {
+        font-size: 18px;
+    }
+
+    &:active, &.active {
+        color: $color;
+    }
+
+    &:hover {
+        border: 1px solid $border-color;
+    }
+
+    &:focus {
+        border: 2px solid #1a73e8;
+    }
+}
+
+@mixin clear-list() {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
